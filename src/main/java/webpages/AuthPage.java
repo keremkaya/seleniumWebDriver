@@ -12,22 +12,22 @@ public class AuthPage {
     private By loginBtn = By.cssSelector("#login button");
 
 
-    public AuthPage(WebDriver driver){
+    public AuthPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void setUsername(String username) {
         driver.findElement(usernameField).sendKeys(username);
     }
+
     public void setPassword(String password) {
         driver.findElement(passwordField).sendKeys(password);
     }
-    public SecureAreaPage clickLoginBtn(){
+
+    public SecureAreaPage clickLoginBtn() {
         driver.findElement(loginBtn).click();
         return new SecureAreaPage(driver);
     }
-
-
 
 
 }

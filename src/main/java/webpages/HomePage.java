@@ -9,6 +9,8 @@ public class HomePage {
     private By formAuthLink = By.linkText("Form Authentication");
     private By dropdownLink = By.linkText("Dropdown");
     private By hoversLink = By.linkText("Hovers");
+    private By keypressesLink = By.linkText("Key Presses");
+    private By sliderLink = By.linkText("Horizontal Slider");
 
 
     public HomePage(WebDriver driver) {
@@ -26,8 +28,19 @@ public class HomePage {
         return new DropdownPage(driver);
     }
 
-    public HoverPage clickHoverPage(){
+    public HoverPage clickHoverPage() {
         driver.findElement(hoversLink).click();
         return new HoverPage(driver);
     }
+
+    public KeyPressesPage clickKeypressesPage() {
+        driver.findElement(keypressesLink).click();
+        return new KeyPressesPage(driver);
+    }
+
+    public SliderPage clickSliderPage() {
+        driver.findElement(sliderLink).click();
+        return new SliderPage(driver);
+    }
+
 }

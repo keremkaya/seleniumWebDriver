@@ -17,10 +17,10 @@ public class BaseTests {
     @BeforeMethod
     public void setUp() {
         System.out.println("browser setting up");
-       driver = BrowserFactory.getBrowser("chrome");
-       driver.manage().deleteAllCookies();
-       driver.get(Var.mainUrl);
-       homePage = new HomePage(driver);
+        driver = BrowserFactory.getBrowser("chrome");
+        driver.manage().deleteAllCookies();
+        driver.get(Var.mainUrl);
+        homePage = new HomePage(driver);
     }
 
     @AfterMethod
