@@ -16,12 +16,10 @@ public class BrowserFactory {
         if (browserType.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-        }
-        else if (browserType.equalsIgnoreCase("ie")) {
+        } else if (browserType.equalsIgnoreCase("ie")) {
             WebDriverManager.iedriver().setup();
             driver = new InternetExplorerDriver();
-        }
-        else if (browserType.equalsIgnoreCase("firefox")) {
+        } else if (browserType.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
