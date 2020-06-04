@@ -1,9 +1,8 @@
 package fileupload;
 
 import base.BaseTests;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import util.Var;
+import testrelated.Var;
 import webpages.FileUploadPage;
 
 import static org.testng.Assert.assertEquals;

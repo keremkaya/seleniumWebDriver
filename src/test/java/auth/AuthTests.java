@@ -2,7 +2,7 @@ package auth;
 
 import base.BaseTests;
 import org.testng.annotations.Test;
-import util.Var;
+import testrelated.Var;
 import webpages.AuthPage;
 import webpages.SecureAreaPage;
 

@@ -15,6 +15,7 @@ public class HomePage {
     private By alertsLink = By.linkText("JavaScript Alerts");
     private By fileUploadLink = By.linkText("File Upload");
     private By dynamicLoadingLink = By.linkText("Dynamic Loading");
+    private By multipleWinLink = By.linkText("Multiple Windows");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -61,5 +62,9 @@ public class HomePage {
         return new DynamicLoadingPage(driver);
     }
 
+    public MultipleWindowsPage clickMultiWinPage(){
+        driver.findElement(multipleWinLink).click();
+        return new MultipleWindowsPage(driver);
+    }
 
 }

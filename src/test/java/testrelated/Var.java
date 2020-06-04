@@ -1,4 +1,4 @@
-package util;
+package testrelated;
 
 public class Var {
     public static final String mainUrl = "https://the-internet.herokuapp.com/";

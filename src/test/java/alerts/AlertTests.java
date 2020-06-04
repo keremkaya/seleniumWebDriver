@@ -2,7 +2,6 @@ package alerts;
 
 import base.BaseTests;
 import org.testng.annotations.Test;
-import util.Var;
 import webpages.AlertsPage;
 
 import static org.testng.Assert.assertEquals;
