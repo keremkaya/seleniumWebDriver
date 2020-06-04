@@ -9,7 +9,6 @@ import webpages.FileUploadPage;
 import static org.testng.Assert.assertEquals;
 
 public class FileUploadTests extends BaseTests {
-
     public static final String successUploadHeader = "File Uploaded!";
     public static final String uploadedFileName = "keremFileUpload.txt";
 

@@ -14,6 +14,7 @@ public class HomePage {
     private By sliderLink = By.linkText("Horizontal Slider");
     private By alertsLink = By.linkText("JavaScript Alerts");
     private By fileUploadLink = By.linkText("File Upload");
+    private By dynamicLoadingLink = By.linkText("Dynamic Loading");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -54,5 +55,11 @@ public class HomePage {
         driver.findElement(fileUploadLink).click();
         return new FileUploadPage(driver);
     }
+
+    public DynamicLoadingPage clickDynamicLoadingPage() {
+        driver.findElement(dynamicLoadingLink).click();
+        return new DynamicLoadingPage(driver);
+    }
+
 
 }

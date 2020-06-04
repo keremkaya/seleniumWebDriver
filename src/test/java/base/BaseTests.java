@@ -9,6 +9,9 @@ import util.BrowserFactory;
 import util.Var;
 import webpages.HomePage;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 public class BaseTests {
 
     public WebDriver driver;
@@ -20,6 +23,7 @@ public class BaseTests {
         driver = BrowserFactory.getBrowser("chrome");
         driver.manage().deleteAllCookies();
         driver.get(Var.mainUrl);
+        driver.manage().timeouts().pageLoadTimeout(Var.pageLoadTimeout, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
     }
 
