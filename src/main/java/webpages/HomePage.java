@@ -1,5 +1,6 @@
 package webpages;
 
+import com.google.gson.internal.$Gson$Preconditions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,7 +12,10 @@ public class HomePage {
     private By hoversLink = By.linkText("Hovers");
     private By keypressesLink = By.linkText("Key Presses");
     private By sliderLink = By.linkText("Horizontal Slider");
-
+    private By alertsLink = By.linkText("JavaScript Alerts");
+    private By fileUploadLink = By.linkText("File Upload");
+    private By dynamicLoadingLink = By.linkText("Dynamic Loading");
+    private By multipleWinLink = By.linkText("Multiple Windows");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -41,6 +45,26 @@ public class HomePage {
     public SliderPage clickSliderPage() {
         driver.findElement(sliderLink).click();
         return new SliderPage(driver);
+    }
+
+    public AlertsPage clickAlertsPage() {
+        driver.findElement(alertsLink).click();
+        return new AlertsPage(driver);
+    }
+
+    public FileUploadPage clickFileUploadPage() {
+        driver.findElement(fileUploadLink).click();
+        return new FileUploadPage(driver);
+    }
+
+    public DynamicLoadingPage clickDynamicLoadingPage() {
+        driver.findElement(dynamicLoadingLink).click();
+        return new DynamicLoadingPage(driver);
+    }
+
+    public MultipleWindowsPage clickMultiWinPage(){
+        driver.findElement(multipleWinLink).click();
+        return new MultipleWindowsPage(driver);
     }
 
 }
