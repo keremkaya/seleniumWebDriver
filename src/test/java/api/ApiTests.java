@@ -36,4 +36,36 @@ public class ApiTests{
                     then().assertThat().contentType(ContentType.JSON);
     }
 
+    @Test
+    public void testLogAll(){
+
+        given().log().all().
+                when().get("http://api.zippopotam.us/TR/34953").
+                then().log().body();
+    }
+
+    @Test
+    public void testHasItem(){
+        given().
+                when().
+                get("http://api.zippopotam.us/TR/34953").
+                then().assertThat().
+                body("places.'place name'", hasItem("Aydinli Mah."));
+    }
+
+    @Test
+    public void testUsageOfNot(){
+        given().
+                when().get("http://api.zippopotam.us/TR/34953").
+                then().assertThat().body("places.'place name'", not(hasItem("Aydinli Mah. 1")));
+    }
+
+    @Test
+    public void testExpectOne(){
+        given().
+                when().get("http://api.zippopotam.us/TR/34953").
+                then().assertThat().body("places.'place name'", hasSize(1));
+    }
+
+
 }
